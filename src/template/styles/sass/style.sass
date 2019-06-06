@@ -3,7 +3,7 @@
 @import fonts.sass
 @import grid.sass
 @import '../../libs/fancybox/dist/jquery.fancybox.css'
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap')
 
 
 /* Global settings */
@@ -23,6 +23,7 @@ body
 	font-family: $font-family-1
 	color: $color-1
 	background: white
+	font-weight: 300
 
 h1, h2, h3, h4, h5, h6
 	font-family: inherit
@@ -66,8 +67,28 @@ input, textarea, button
 		font-family: $font-family-1
 		background: white
 		width: 100%
-
-
+	&_normal
+		.input
+			&__wrap
+				font-size: 18px
+				font-weight: 400
+				height: 54px
+	&_radius
+		.input
+			&__wrap
+				border-radius: 50px
+	&_mid
+		.input
+			&__wrap
+				padding-left: 10px
+				padding-right: 10px
+				text-align: center
+	&_border-gray
+		.input
+			&__wrap
+				border: 1px solid #3a414e
+				&::placeholder
+					color: #797979
 .textarea
 	position: relative
 	&__wrap
@@ -80,7 +101,7 @@ input, textarea, button
 
 .btn
 	position: relative
-	display: flex
+	display: inline-flex
 	align-items: center
 	justify-content: center
 	font-size: $font-size
@@ -89,7 +110,23 @@ input, textarea, button
 	text-align: center
 	transition: .3s
 	background-color: transparent
-
+	overflow: hidden
+	span
+		display: flex
+		align-items: center
+		justify-content: center
+	&_normal
+		height: 54px
+		span
+			font-size: 18px
+			font-weight: 400
+			padding-left: 55px
+			padding-right: 55px
+	&_gradient
+		color: #fff
+		background-image: linear-gradient(to top, #017e3c 0%, #21a63b 99%, #21a63b 100%)
+	&_radius
+		border-radius: 50px
 .input input, .textarea textarea
 	transition: .3s
 
@@ -117,6 +154,470 @@ input, .btn, .slick-slide, textarea
 
 
 
+.panel
+	color: #fff
+	background-color: #0b3d5a
+	padding-top: 11px
+	padding-bottom: 13px
+	&__nav
+		li
+			font-size: 11px
+		a
+			color: #fff
+			&:hover
+				border-color: #fff
+	&__left
+		li
+			margin-right: 20px
+	&__right
+		margin-left: auto
+		li
+			margin-left: 20px
+
+
+.header
+	&__wrap
+		padding-top: 45px
+		padding-bottom: 30px
+	&__left, &__mid, &__right
+		width: 33.333%
+		
+	&__logo
+		img
+			margin-left: auto
+			margin-right: auto
+
+
+.exchange
+	font-size: 12px
+	text-align: center
+	padding-top: 18px
+	&__item
+		margin-right: 20px
+		&:last-of-type
+			margin-right: 0
+	&__head, &__body
+		display: flex
+		flex-wrap: wrap
+	&__head
+		
+		
+	&__col
+		width: 34px
+	&__currency
+		font-weight: 700
+		margin-bottom: 7px
+	&__number
+		margin-bottom: 5px
+		&:last-of-type
+			margin-bottom: 0
+	&__img
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 17px
+		margin-top: 6px
+
+.b-contacts
+	text-align: right
+	&__phone
+		font-size: 20px
+		font-weight: 400
+		margin-bottom: 10px
+	&__mail
+		font-weight: 400
+		margin-bottom: 21px
+		a
+			color: #015f96
+	&__time
+		max-width: 160px
+		width: 100%
+		font-size: 14px
+		margin-left: auto
+	
+
+.nav
+	&__list
+		position: relative
+		&:before
+			position: absolute
+			bottom: -4px
+			left: 0
+			right: 0
+			content: ''
+			height: 3px
+			background-color: #e0f7ff
+		> ul
+			justify-content: center
+			> li
+				position: relative
+				margin-left: 4px
+				margin-right: 4px
+				&.has-drop
+					> a
+						&:after
+							display: inline-block
+							vertical-align: middle
+							content: ''
+							width: 0
+							height: 0
+							border-style: solid
+							border-width: 5px 5.5px 0 5.5px
+							border-color: #000000 transparent transparent transparent
+							margin-left: 6px
+							transition: .3s
+				&:hover
+					> ul
+						visibility: visible
+						transform: translateY(0px)
+						opacity: 1
+					> a
+						color: #fff
+						background-color: #0b3d5a
+						&:after
+							border-color: #fff transparent transparent transparent
+				&.selected
+					> a
+						color: #fff
+						background-color: #0b3d5a
+						&:after
+							border-color: #fff transparent transparent transparent
+				> a
+					display: block
+					font-weight: 500
+					padding: 19px 23px
+					border-radius: 3px
+
+						
+				> ul
+					position: absolute
+					top: 100%
+					left: 0
+					right: 0
+					color: #fff
+					background-color: #0b3d5a
+					padding: 5px 15px 15px
+					z-index: 1
+					margin-top: -2px
+					visibility: hidden
+					transform: translateY(20px)
+					transition: .3s
+					opacity: 0
+					border-radius: 0 0 3px 3px
+					li
+						margin-bottom: 6px
+						width: 100%
+						&:last-of-type
+							margin-bottom: 0
+					a
+						font-size: 14px
+						color: #fff
+						display: inline
+						cursor: pointer
+						&:hover
+							border-color: #fff
+
+
+.title
+	font-size: 50px
+	line-height: 55px
+	font-weight: 700
+
+
+.subtitle
+	font-size: 33px
+	line-height: 39px
+	font-weight: 700
+
+
+
+.desc
+	font-size: 24px
+	font-weight: 700
+	line-height: 31px
+
+
+.color-blue
+	color: #0068a1
+
+
+.color-green
+	color: #108b38
+
+
+.hello
+	min-height: 598px
+	background: url('../../img/hello.png') no-repeat center top
+	padding-top: 68px
+	position: relative
+	.case
+		position: static
+	&__title
+		color: #06659c
+		text-align: center
+		max-width: 800px
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 85px
+	&__item
+		line-height: 22px
+		width: 50%
+		&:nth-of-type(odd)
+			text-align: right
+		&:nth-of-type(1), &:nth-of-type(2)
+			margin-bottom: 130px
+		&:nth-of-type(1)
+			padding-right: 285px
+		&:nth-of-type(2)
+			padding-left: 285px
+		&:nth-of-type(3)
+			padding-right: 375px
+		&:nth-of-type(4)
+			padding-left: 375px
+	&__share
+		font-size: 15px
+		font-weight: 500
+		text-align: center
+		width: 230px
+		line-height: 20px
+		position: absolute
+		bottom: 7px
+		left: 50%
+		transform: translateX(-50%)
+		span
+			font-weight: 700
+
+
+.partners
+	position: relative
+	&__item
+		position: absolute
+		top: -235px
+		&_left
+			left: 50%
+			margin-left: -774px
+		&_right
+			right: 50%
+			margin-right: -774px
+	&__title
+		color: #06659c
+		font-size: 21px
+		font-weight: 700
+		text-align: center
+		margin-bottom: 21px
+	&__img
+		display: block
+		width: 215px
+		height: 378px
+		background-size: cover
+		background-repeat: no-repeat
+		box-shadow: 0 17px 32px #c4dbe3
+
+.main-btn-wrap
+	text-align: center
+	padding-top: 24px
+
+
+
+.services
+	padding-top: 55px
+	padding-bottom: 35px
+	&__title
+		margin-bottom: 50px
+		text-align: center
+	&__list
+		padding-left: 80px
+	&__item
+		width: 33.333%
+		margin-bottom: 35px
+		padding-right: 20px
+	&__icon
+		margin-bottom: 20px
+	&__text
+		max-width: 275px
+		width: 100%
+		line-height: 23px
+
+
+
+.support
+	padding-top: 60px
+	padding-bottom: 60px
+	background-color: #f3f3eb
+	&__title
+		text-align: center
+		margin-bottom: 55px
+	&__item
+		margin-right: 60px
+		&:last-of-type
+			margin-right: 0
+	&__img
+		width: 140px
+		height: 140px
+		background-color: #ffffff
+		border-radius: 50%
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-left: auto
+		margin-right: auto
+	&__data
+		line-height: 23px
+		width: 220px
+		margin-left: auto
+		margin-right: auto
+		text-align: center
+		margin-top: -19px
+		font-size: 18px
+	&__position
+		font-weight: 700
+	&__btn-wrap
+		text-align: center
+		margin-top: 22px
+
+
+
+
+.c-about
+	padding-top: 60px
+	padding-bottom: 70px
+	&__data
+		width: 410px
+	&__title
+		margin-bottom: 45px
+	&__desc-wrap
+		width: 308px
+		height: 296px
+		background-color: #e0f7ff
+		border: 28px solid #eefbff
+		margin-left: -26px
+		border-radius: 50%
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
+		font-weight: 500
+		line-height: 23px
+		color: #3a414e
+		text-align: center
+	&__content
+		width: calc(100% - 410px)
+	&__text
+		line-height: 23px
+		margin-bottom: 45px
+	
+
+.form
+	&__title
+		max-width: 470px
+		width: 100%
+		margin-bottom: 28px
+	&__input
+		width: 210px
+		margin-right: 20px
+
+
+.cta
+	padding-top: 32px
+	&__title
+		margin-bottom: 25px
+
+
+
+
+
+.page
+	padding-top: 55px
+	padding-bottom: 75px
+	&__title
+		margin-bottom: 75px
+		color: #06659c
+		text-align: center
+
+
+.faq
+	&__left
+		width: 270px
+		padding-right: 15px
+	&__right
+		width: calc(100% - 270px)
+
+	&__nav
+		li
+			width: 100%
+			margin-bottom: 7px
+			&:last-of-type
+				margin-bottom: 0
+			&.ui-state-active
+				a
+					color: $color-1
+					border-color: transparent !important
+		a
+			color: #06659c
+			outline: none !important
+			&:hover
+				border-color: #06659c
+
+	&__btn
+		display: inline-block
+		color: #05863a
+		margin-top: 60px
+		border-bottom: 1px dashed #05863a
+		transition: .3s
+		&:hover
+			border-color: transparent
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: -40px
+
+	&__item
+		font-size: 14px
+		width: 33.333%
+		padding-right: 90px
+		margin-bottom: 40px
+		&-title
+			color: #06659c
+			font-weight: 700
+			margin-bottom: 10px
+			a
+				color: #06659c
+				display: inline
+				&:hover
+					border-color: #06659c
+		&-text
+			line-height: 20px
+	
+	&__pagination
+		padding-top: 60px
+
+
+.pagination
+	ul
+		justify-content: center
+	a
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 24px
+		height: 24px
+		color: #06659c
+		border-radius: 50%
+		
+
+	li
+		margin-left: 4px
+		margin-right: 4px
+		&.selected
+			a
+				color: #fff
+				background-color: #06659c !important
+				cursor: default !important
+		&:hover
+			a
+				color: #fff
+				background-color: #087EC2
 
 
 .hidden-lg
