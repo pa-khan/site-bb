@@ -4,6 +4,7 @@ $(document).ready(function($) {
 
 
 	$('.faq').tabs();
+	$('.price_tabs').tabs();
 	$('.select select').styler();
 	$('.range__wrap').slider({
 		'value': 30,

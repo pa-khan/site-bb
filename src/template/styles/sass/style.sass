@@ -526,6 +526,10 @@ input, .btn, .slick-slide, textarea, a
 	color: #108b38
 
 
+.color-gray
+	color: #919178
+
+
 .hello
 	min-height: 598px
 	background: url('../../img/hello.png') no-repeat center top
@@ -708,6 +712,9 @@ input, .btn, .slick-slide, textarea, a
 .bg-gray
 	background-color: #f3f3eb
 
+.bg-blue
+	background-color: #e0f7ff
+
 .page
 	position: relative
 	padding-top: 55px
@@ -728,9 +735,19 @@ input, .btn, .slick-slide, textarea, a
 		.page
 			&__title
 				color: #118c38
-		.services
+		.service
 			&__title
 				color: #118c38
+	&.bg-blue
+		.breadcrumbs
+			li, a
+				color: #4da1d2
+			a
+				&:hover
+					border-color: #4da1d2
+		.service
+			&__title
+				color: #06659c
 				
 
 
@@ -946,15 +963,40 @@ input, .btn, .slick-slide, textarea, a
 
 			&__price
 				width: calc(100% - 315px)	
+	&_three
+		.service
+			&__desc
+				width: 315px
+				padding-right: 15px
+
+			&__price
+				width: calc(100% - 315px - 290px)	
 	&_full
 		.service
-			&__price
+			&__price, &__desc
 				width: 100%
+			&__breadcrumbs
+				padding-top: 0
+				margin-bottom: 30px
 	&__title
 		color: #118c38
 		text-align: center
 		margin-top: 70px
 		margin-bottom: 45px
+	&__subtitle
+		width: 100%
+		max-width: 215px
+		color: #afdae9
+		font-size: 21px
+		font-weight: 700
+		line-height: 26px
+		margin-left: auto
+		&-wrap
+			width: 270px
+			// height: 100%
+			display: flex
+			flex-wrap: wrap
+			align-items: center
 	&__breadcrumbs
 		padding-top: 37px
 		margin-bottom: 40px
@@ -1007,12 +1049,11 @@ input, .btn, .slick-slide, textarea, a
 		margin-right: auto
 
 .price
+	margin-bottom: -35px
 	&__list
 		padding: 40px 45px 22px
 		background-color: #ffffff
 		margin-bottom: 35px
-		&:last-of-type
-			margin-bottom: 0
 		table
 			width: 100%
 			border-collapse: collapse
@@ -1021,7 +1062,8 @@ input, .btn, .slick-slide, textarea, a
 				padding-bottom: 14px
 				text-align: left
 				font-weight: 500
-		
+			tr
+				vertical-align: top
 			td
 				padding-top: 18px
 				padding-bottom: 18px
@@ -1029,6 +1071,7 @@ input, .btn, .slick-slide, textarea, a
 					font-size: 14px
 					font-weight: 700
 					line-height: 18px
+					padding-right: 20px
 					span
 						font-weight: 400
 					b
@@ -1040,12 +1083,31 @@ input, .btn, .slick-slide, textarea, a
 							color: $color-1
 							font-style: italic
 							font-weight: inherit
+					strong
+						display: block
+						margin-top: 4px
+						margin-bottom: 4px
+						&:last-of-type
+							margin-bottom: 0
 				&:nth-of-type(2)
 					font-size: 18px
 					font-weight: 500
 					color: #118b38
+					span
+						font-size: 12px
+						font-weight: 500
 				&:nth-of-type(3)
 					font-size: 14px
+			ul
+				flex-direction: column
+				li
+					display: block
+					&:before
+						content: '•'
+						margin-right: 3px
+		h3
+			font-weight: 500
+			margin-bottom: 3px
 		dl
 			display: flex
 			flex-wrap: wrap
@@ -1081,11 +1143,94 @@ input, .btn, .slick-slide, textarea, a
 				td
 					padding-top: 10px
 					padding-bottom: 10px
+		&_small-span
+
 		&_normal-padding
 			table
 				td
 					padding-top: 10px
 					padding-bottom: 10px
+		&_last
+			table
+				td
+					&:nth-of-type(2)
+						font-size: 14px
+						font-weight: 400
+						color: $color-1
+						span
+							font-size: 14px
+							font-weight: 500
+					&:nth-of-type(4)
+						font-size: 18px
+						font-weight: 500
+						color: #118b38
+						span
+							font-size: 14px
+							font-weight: 500
+						strong
+							color: $color-1
+							font-size: 14px
+							font-weight: 400
+						p
+							margin-bottom: 10px
+							&:last-of-type
+								margin-bottom: 0
+		&_padding
+			table
+				td
+					&:nth-of-type(1)
+						padding-right: 30px
+					&:nth-of-type(2)
+						padding-right: 40px
+					&:nth-of-type(3)
+						padding-right: 20px
+		&_two
+			table
+				th, td
+					&:nth-of-type(1)
+						width: 58%
+					&:nth-of-type(2)
+						width: 42%
+				th
+					padding-bottom: 30px
+				td
+					padding-top: 10px
+					padding-bottom: 10px
+		&_align-middle
+			table
+				tr
+					vertical-align: middle
+		&_plans
+			table
+				th, td
+					font-size: 14px !important
+					&:nth-of-type(1)
+						width: 18%
+					&:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4)
+						width: 22.666%
+
+					&:nth-of-type(5)
+						width: 14%
+				td
+					&:nth-of-type(2)
+						color: $color-1
+				hr
+					display: block
+					width: 56px
+					height: 2px
+					background-color: #82949a
+					margin-top: 7px
+				.color-green
+					font-size: 18px
+					font-weight: 500
+	&_grid
+		display: flex
+		flex-wrap: wrap
+		.price
+			&__list
+				width: calc(50% - 22px)
+				&:nth-of-type(2n)
+					margin-left: auto
 
 
 
@@ -1143,7 +1288,7 @@ input, .btn, .slick-slide, textarea, a
 	&__body
 		padding-left: 35px
 		padding-right: 35px
-		padding-bottom: 50px
+		padding-bottom: 30px
 		border-bottom: 1px solid #b1deee
 
 	&__foot
