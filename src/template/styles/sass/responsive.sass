@@ -1,7 +1,102 @@
+@media screen and (max-width: 1500px)
+	.partners
+		display: none
 @media screen and (max-width: 1199px)
 	.case
 		width: 950px
 	
+
+	.title
+		font-size: 42px
+		line-height: 46px
+
+	.subtitle
+		font-size: 28px
+		line-height: 32px
+
+	.nav__list > ul > li
+		margin-left: 0
+		margin-right: 0
+		& > a
+			padding: 10px 17px
+
+	
+	.c-about
+		&__data
+			width: 320px
+		&__content
+			width: calc(100% - 320px)
+
+	.form
+		&__wrap
+			max-width: 280px
+			width: 100%
+		&__input
+			width: 100%
+			margin-right: 0
+			margin-bottom: 10px
+		&__btn
+			width: 100%
+
+	.about
+		&__data
+			width: 270px
+		&__text
+			width: calc(100% - 270px)
+
+
+
+
+
+	.contacts
+		&__map
+			width: 50%
+		&__data
+			&-wrap
+				margin-left: 35px
+
+
+	.faq
+		&__left
+			width: 200px
+		&__right
+			width: calc(100% - 200px)
+		&__item
+			padding-right: 15px
+			margin-bottom: 25px
+
+
+	.pay
+		&__desc
+			display: none
+
+
+	.calc
+		width: 100%
+		margin-left: 0
+		margin-right: 0
+		padding: 25px
+		&__input
+			width: 140px
+			margin-right: 15px
+		&__price
+			width: 360px
+		&__body
+			padding-left: 15px
+			padding-right: 15px
+			padding-bottom: 25px
+		&__send
+			width: calc(100% - 360px)
+
+	.price
+		&__nav
+			a
+				padding-left: 20px
+				padding-right: 20px
+	.footer
+		&__nav
+			li
+				margin-bottom: 4px
 	.hidden-lg
 		display: block
 	
@@ -14,7 +109,313 @@
 	.case
 		width: 750px
 
-	.hidden-md
+	.exchange
+		display: none
+
+	.header
+		&__left
+			display: none
+
+		&__mid
+			width: 66%
+
+		&__logo
+			img
+				margin-left: 0
+
+		&__wrap
+			padding-top: 15px
+			padding-bottom: 15px
+
+	.nav
+		color: #fff
+		background-color: #0b3d5a
+		padding-top: 10px
+		padding-bottom: 10px
+		&__wrap
+			display: flex
+			flex-wrap: wrap
+		&__list
+			order: 2
+			display: none
+			&:before
+				display: none
+			> ul
+				padding-bottom: 10px
+				> li
+					width: 100%
+					&.has-drop
+						a
+							&:after
+								border-color: #ffffff transparent transparent transparent
+					> a
+						padding: 6px 0
+					> ul
+						position: static
+						visibility: visible
+						opacity: 1
+						transform: none
+						padding: 5px 0 5px 15px
+						display: none
+		a
+			color: #fff
+
+
+	.hum
+		margin-left: auto
+		cursor: pointer
+		span
+			display: block
+			width: 35px
+			height: 4px
+			margin-bottom: 7px
+			background-color: #fff
+			transition: .3s
+			position: relative
+			&:last-of-type
+				margin-bottom: 0
+		&_toggle
+			span
+				&:nth-of-type(1)
+					top: 11px
+					transform: rotate(45deg)
+				&:nth-of-type(2)
+					opacity: 0
+				&:nth-of-type(3)
+					top: -11px
+					transform: rotate(-45deg)
+
+
+	.panel
+		display: none
+
+
+	.title
+		font-size: 36px
+		line-height: 40px
+
+	.subtitle, .desc
+		font-size: 24px
+		line-height: 27px
+
+
+	.hello
+		padding-top: 30px
+		padding-bottom: 0px
+		background-image: none
+		background-color: #E0F7FF
+		min-height: 1px
+		background-size: auto 120%
+		&__title
+			margin-bottom: 60px
+		&__list
+			padding-bottom: 70px
+		&__item
+			width: 25%
+			text-align: center !important
+			padding-left: 5px !important
+			padding-right: 5px !important
+			margin-bottom: 20px !important
+		&__share
+			position: relative
+			&:before
+				z-index: -1
+				content: ''
+				width: 300px
+				height: 300px
+				border-radius: 50%
+				background-color: #fff
+				display: block
+				position: absolute
+				top: -45px
+				left: -38px
+
+	.services
+		padding-top: 40px
+		padding-bottom: 10px
+		&__list
+			padding-left: 0
+		&__item
+			width: 50%
+			padding-right: 10px
+			margin-bottom: 20px
+		&__icon
+			margin-bottom: 8px
+		&__text
+			font-size: 13px
+			line-height: 18px
+			br
+				display: none
+
+	.support
+		padding-top: 40px
+		padding-bottom: 40px
+		&__title
+			margin-bottom: 30px
+		&__item
+			margin-left: 20px
+			margin-right: 20px
+			margin-bottom: 20px
+			&:last-of-type
+				margin-right: 20px
+
+	.c-about
+		padding-top: 40px
+		padding-bottom: 50px
+		&__title
+			text-align: center
+			margin-bottom: 30px
+		&__data
+			width: 100%
+		&__desc
+			&-wrap
+				display: none
+		&__content
+			width: 100%
+		&__text
+			text-align: justify
+			margin-bottom: 35px
+		&__form, &__cta
+			width: 100%
+			max-width: 420px
+			margin-left: auto
+			margin-right: auto
+			text-align: center
+
+	.form
+		&__title
+			margin-bottom: 15px
+		&__wrap
+			margin-left: auto
+			margin-right: auto
+
+	.cta
+		&__title
+			margin-bottom: 15px
+
+
+	.page
+		padding-top: 30px
+		padding-bottom: 35px
+		&__title
+			margin-bottom: 30px
+
+	.contacts
+		&__map
+			width: 100%
+			height: 280px
+			order: 2
+		&__data
+			p
+				margin-bottom: 10px
+				&:last-of-type
+					margin-bottom: 0
+			&-wrap
+				width: 100%
+				max-width: 750px
+				margin-left: auto
+				margin-right: auto
+				padding-left: 15px
+				padding-right: 15px
+				padding-top: 0
+				padding-bottom: 25px
+
+	.requisites
+		padding: 0
+		margin-top: 30px
+		&__download
+			order: 2
+			width: 100%
+			margin-top: 15px
+			padding: 15px
+			height: auto
+			text-align: center
+			justify-content: center
+			a
+				margin-right: 4px
+				position: relative
+				top: 1px
+		&__data
+			padding-left: 0
+			width: 100%
+			&-text
+				ul
+					width: 100%
+					padding-right: 0
+
+	.faq
+		&__pagination
+			padding-top: 40px
+
+	.service
+		.service
+			&__desc
+				width: 100%
+				padding-right: 0
+			&__breadcrumbs
+				padding-top: 0
+				margin-bottom: 20px
+			&__text
+				max-width: 100%
+				margin-bottom: 20px
+			&__price
+				width: 100%
+		&__data
+			padding-left: 0
+		&__title
+			margin-bottom: 25px
+		&__subtitle-wrap
+			display: none
+		&__alert
+			margin-top: 45px
+	.price
+		margin-bottom: 0
+		&__list
+			width: 100%
+			padding: 10px 7px
+			margin-bottom: 25px
+			&:last-of-type
+				margin-bottom: 0
+			table
+				th, td
+					padding: 5px 7px !important
+
+		&__title
+			margin-bottom: 10px
+	
+		
+
+	.calc
+		&__price, &__send
+			width: 100%
+
+		&__send
+			margin-top: 15px
+
+	.radios
+		&_line
+			.radio
+				width: 100%
+				margin-right: 0
+
+	.price
+		&__list
+			dl
+				padding-left: 7px
+				padding-right: 7px
+		&_grid
+			.price
+				&__list
+					width: 100%
+						
+	.footer
+		&__left
+			width: 70%
+		&__right
+			width: 30%
+		&__phone
+			margin-bottom: 57px
+	.hidden-md, .show-mobile
 		display: block		
 	
 	.hidden-sm
@@ -26,6 +427,200 @@
 	.case
 		width: 100%
 
+	.header
+		&__mid, &__right
+			width: 100%
+		&__logo
+			margin-bottom: 7px
+			max-width: 300px
+			margin-left: auto
+			margin-right: auto
+			img
+				margin-left: auto
+
+	.b-contacts
+		text-align: center
+		&__mail
+			margin-bottom: 9px
+		&__time
+			margin-right: auto
+
+	.title
+		font-size: 26px
+		line-height: 30px
+
+	.subtitle, .desc
+		font-size: 20px
+		line-height: 23px
+	.hello
+		&__title
+			margin-bottom: 30px
+		&__list
+			margin-left: -5px
+			margin-right: -5px
+		&__item
+			width: 50%
+			br
+				display: none
+
+	.support
+		padding-top: 30px
+		padding-bottom: 30px
+		&__item
+			width: 100%
+			margin-left: 0
+			margin-right: 0
+			&:last-of-type
+				margin-right: 0
+		&__position
+			
+		&__desc
+			font-size: 16px
+			line-height: 20px
+		&__btn-wrap
+			margin-top: 5px
+
+
+	.c-about
+		padding-top: 30px
+		padding-bottom: 40px
+
+
+	
+
+	.footer
+		&__nav
+			display: none
+		&__left, &__right
+			width: 100%
+			text-align: center
+
+		&__phone
+			margin-top: 10px
+			margin-bottom: 10px
+
+		&__time
+			margin-right: auto
+
+	.about
+		&__data, &__text
+			width: 100%
+
+		&__text
+			margin-top: 20px
+
+
+	.data
+		&__item
+			max-width: 100%
+			
+	.faq
+		&__left, &__right
+			width: 100%
+		&__right
+			padding-top: 25px
+		&__list
+			margin-left: -5px
+			margin-right: -5px
+		&__item
+			width: 50%
+			padding-left: 5px
+			padding-right: 5px
+		&__text
+			line-height: 17px
+		&__btn
+			margin-top: 15px
+
+	.pay
+		padding: 0
+		background: none
+		&__item
+			margin-bottom: 13px
+			&:last-of-type
+				margin-bottom: 0
+		&__select
+			width: 100%
+		&__label
+			width: 100%
+			text-align: left
+			margin-bottom: 4px
+			padding-top: 0
+		&__elem
+			width: 100%
+		&__submit
+			width: 100%
+		&__btn
+			margin-top: 16px
+
+	.price
+		&__list
+			table
+				display: block
+				overflow-x: auto
+				th, td
+					// width: 200px !important
+					min-width: 170px
+		&__text
+			width: 100%
+			margin-bottom: 5px
+
+	.calc
+		padding: 15px
+		margin-top: 40px
+		&__body
+			padding-left: 0
+			padding-right: 0
+		&__item
+			margin-top: 20px
+			&-title
+				margin-bottom: 10px
+		&__send
+			flex-direction: column
+		&__input
+			width: 100%
+			margin-right: 0
+			margin-bottom: 10px
+		&__btn
+			width: 100%
+		&__foot
+			padding-top: 15px
+
+	.range
+		flex-direction: column
+		align-items: flex-start
+		&__input
+			margin-bottom: 10px
+
+	.price
+		&__nav
+			margin-bottom: 10px
+			margin-top: -15px
+			li
+				width: 100%
+				&.ui-state-active
+					a
+						background-color: transparent
+			a
+				display: block
+				padding: 10px 0
+		&__list
+			dl
+				margin-bottom: -10px
+				dt
+					font-size: 13px
+					line-height: 16px
+					width: 50%
+					max-width: none
+					margin-bottom: 10px
+		&__title, &__desc
+			text-align: center
+		&__desc
+			justify-content: center
+		&__text
+			margin-right: 0
+	.price__list table td:nth-of-type(1) i
+		padding-left: 8px
+
 	.hidden-sm
 		display: block
 	
@@ -33,3 +628,17 @@
 		display: none
 	
 
+@media screen and (max-width: 400px)
+	.services
+		&__title
+			margin-bottom: 25px
+		&__item
+			width: 100%
+		&__icon
+			img
+				margin-left: auto
+				margin-right: auto
+		&__text
+			margin-left: auto
+			margin-right: auto
+			text-align: center

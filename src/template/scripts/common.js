@@ -48,4 +48,31 @@ $(document).ready(function($) {
 			$(this).addClass('price__list_2');
 		}
 	});
+
+
+	$('.nav__list > ul > li.has-drop > a').click(function(event) {
+		if ($(window).width() < 992) {
+			event.preventDefault();
+			var ul = $(this).next('ul');
+			ul.slideToggle(200);
+		}
+	});
+
+
+	var nav = $('.nav__list'),
+			hum = $('.hum'),
+			humClass = 'hum_toggle';
+
+	hum.click(function(event) {
+		hum.toggleClass(humClass);
+		nav.slideToggle(300);
+	});
+
+	$(window).on('resize', function(event) {
+		if($(window).width()>=992){
+			nav.removeAttr('style');
+			hum.removeClass(humClass);
+		}
+	});
+
 });

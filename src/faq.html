@@ -186,6 +186,10 @@
 									<li><a href="">Пункт меню 5</a></li>
 								</ul>
 							</li>
+							<li class="show-mobile"><a href="">Вопросы и ответы</a></li>
+							<li class="show-mobile"><a href="">Способы оплаты</a></li>
+							<li class="show-mobile"><a href="">Контакты и реквизиты</a></li>
+							<li class="show-mobile"><a href="">Вход в личный кабинет</a></li>
 						</ul>
 					</div>
 					<div class="nav__hum hum">
@@ -213,7 +217,7 @@
 									<li><a href="#faq-list-3">Оценка</a></li>
 								</ul>
 							</div>
-							<a href="" class="faq__btn">Задать вопрос</a>
+							<a data-fancybox data-src="#popup-question" href="javascript:;" class="faq__btn">Задать вопрос</a>
 						</div>
 
 						<!-- faq -->
@@ -385,6 +389,22 @@
 			<input type="tel" class="input__wrap" placeholder="Телефон">
 		</div>
 		<button class="popup__btn btn btn_gradient btn_normal btn_radius"><span>Оставить заявку</span></button>
+	</div>
+</div>
+
+<div class="popup popup_small" id="popup-question">
+	<div class="popup__title subtitle">Задать вопрос</div>
+	<div class="popup__form">
+		<div class="popup__input input input_border-gray input_normal input_radius">
+			<input type="text" class="input__wrap" placeholder="Имя">
+		</div>
+		<div class="popup__input input input_border-gray input_normal input_radius input_phone">
+			<input type="tel" class="input__wrap" placeholder="Телефон">
+		</div>
+		<div class="popup__input input input_border-gray input_normal input_radius">
+			<input type="text" class="input__wrap" placeholder="Вопрос">
+		</div>
+		<button class="popup__btn btn btn_gradient btn_normal btn_radius"><span>Отправить</span></button>
 	</div>
 </div>
 </body>
